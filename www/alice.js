@@ -20,9 +20,11 @@ function changeButton ()
   b.className = c;
 }
 
-function onDeviceReady ()
+function onDeviceReady()
 {
+alert('Here');
   navigator.geolocation.getCurrentPosition(onGotPosition, onDidNotGetPostion);
+
 }
 
 function onGotPosition(position)
