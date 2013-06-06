@@ -22,7 +22,17 @@ function changeButton ()
 
 function onDeviceReady ()
 {
-  navigator.accelerometer.getCurrentAcceleration(onGotAccel, onDidNotGetAccel);
+  navigator.geolocation.getCurrentPosition(onGotPosition, onDidNotGetPostion);
+}
+
+function onGotPosition(position)
+{
+  document.getElementById("cButton").className = "Blue";
+}
+
+function onDidNotGetPosition()
+{
+  document.getElementById("cButton").className = "Red";
 }
 
 function onGotAccel(acceleraton)
