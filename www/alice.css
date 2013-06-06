@@ -2,10 +2,16 @@ h1 {
   color: red;
 }
 
-@media (min-width: 450) {
+@media (min-width: 450px) {
   .austin {
     width: 470px;
     height: 75px;
+  }
+}
+
+@media (max-width: 451px) {
+  .austin {
+    display: none;
   }
 }
 
