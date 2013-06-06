@@ -29,11 +29,13 @@ alert('Here');
 
 function onGotPosition(position)
 {
+alert('Got Positon');
   document.getElementById("cButton").className = "Blue";
 }
 
 function onDidNotGetPosition()
 {
+alert('Fail');
   document.getElementById("cButton").className = "Red";
 }
 
