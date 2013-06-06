@@ -2,13 +2,19 @@
 <head>
 <title>Big Fancy Title</title>
 <link rel="stylesheet" href="alice.css" />
+<script type="text/javascript" src="alice.js"></script>
+<script type="text/javascript" src="cordova.x.x.x.js"></script>
+<script type="text/javascript">
+  document.addEventListener("deviceready", onDeviceReady, false);
+</script>
 </head>
 <body>
 <h1>Welcome to My Nightmare</h1>
 <p>
 I think you are going to like it here.
 </p>
-<input type="text" name="key">
+<input type="text" name="key"><br>
+<button type="button" id="cButton" onclick="changeButton()">Change Me</button><br>
 <a href="http://alicecooper.com/">Alice Cooper</a>
 <br>
 <img class="austin" src="img/head-austin.jpg" alt="Austin" />

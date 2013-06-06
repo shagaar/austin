@@ -15,8 +15,16 @@ h1 {
   }
 }
 
-.abc {
+.Red {
+  background-color: red;
+}
+
+.Blue {
   background-color: blue;
+}
+
+.Grey {
+  background-color: grey;
 }
 
 #part3 {
