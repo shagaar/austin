@@ -24,7 +24,7 @@ function onDeviceReady()
 {
 alert('Here');
   navigator.geolocation.getCurrentPosition(onGotPosition, onDidNotGetPostion);
-
+alert('There');
 }
 
 function onGotPosition(position)
