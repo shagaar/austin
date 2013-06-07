@@ -1,4 +1,4 @@
-function changeButton ()
+function changeButton()
 {
   var r = Math.floor(Math.random()*3)+1;
   var c;
@@ -64,4 +64,4 @@ $(document).ready(function() {
     element.innerHTML = 'Getting position...<br>';
     navigator.geolocation.getCurrentPosition(onSucc, onErr, {enableHighAccuracy:true});
   });
-}
+});
