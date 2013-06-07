@@ -56,15 +56,12 @@ function onDidNotGetAccel()
 }
 
 $( document ).ready(function() {
-  alert('ready');
 
   $('#geo-page').bind("swipeleft", function(event) {
-  alert('swiping');
-  $('#main-page').load('#main-page');
+    $(document).load('#main-page');
   });
 
   $('#geoButt').click(function() {
-    alert('button dammit');
     var element = document.getElementById('geolocation');
     element.innerHTML = 'Getting position...<br>';
     navigator.geolocation.getCurrentPosition(onSucc, onErr, {enableHighAccuracy:true});
