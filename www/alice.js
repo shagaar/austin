@@ -22,7 +22,9 @@ function changeButton ()
 
 function onDeviceReady()
 {
+alert('Here');
   navigator.geolocation.getCurrentPosition(onGotPosition, onDidNotGetPostion, {enableHighAccuracy:true});
+alert('There');
 }
 
 function onGotPosition(position)
