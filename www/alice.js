@@ -1,4 +1,4 @@
-function changeButton ()
+$('#cbutton').click(event, function ()
 {
   var r = Math.floor(Math.random()*3)+1;
   var c;
@@ -18,7 +18,7 @@ function changeButton ()
   
   var b = document.getElementById("cButton");
   b.className = c;
-}
+});
 
 function onSucc(position)
 {
@@ -66,7 +66,7 @@ $( document ).ready(function() {
   });
 
   $('#change-page').bind("swipeleft", function(event) {
-    $.mobile.changepage('#main-page', {trasition : "flip"});
+    $.mobile.changepage('#main-page', {transition : "flip"});
   });
 
   $('#geoButt').click(function() {
