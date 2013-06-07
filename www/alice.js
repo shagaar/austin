@@ -20,12 +20,12 @@ function changeButton ()
   b.className = c;
 }
 
-function geoButton()
+$('#geoButt').click(function ()
 {
   var element = document.getElementById('geolocation');
   element.innerHTML = 'Getting position...<br>';
   navigator.geolocation.getCurrentPosition(onSucc, onErr, {enableHighAccuracy:true});
-}
+});
 
 function onSucc(position)
 {
