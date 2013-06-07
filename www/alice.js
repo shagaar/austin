@@ -62,6 +62,7 @@ function slideleft()
 
 $( document ).ready(function() {
 
+alert('ready');
   $('#geo-page').bind("swipeleft", function(event) {
     $.mobile.changePage('#main-page');
   });
