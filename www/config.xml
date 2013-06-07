@@ -21,6 +21,7 @@
   <preference name="permissions" value="none"/>
 
   <plugin name="Accelerometer" value="org.apache.cordova.accelListener" />
+  <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
 
 
   <!-- See http://build.phonegap.com/docs/config-xml for more details -->
