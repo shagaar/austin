@@ -74,6 +74,8 @@ $( document ).ready(function() {
 
   $('#adder-page').bind("swipeleft", function() { slideleft(); });
 
+  $(window).resize(function () { alert('resized'); } );
+
   $('#geoButt').click(function() {
     var element = document.getElementById('geolocation');
     element.innerHTML = 'Getting position...<br>';
