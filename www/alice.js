@@ -54,10 +54,10 @@ function slideleft() {
 }
 
 $(document).ready(function() {
-  $('#change-page').bind("slideleft", function() { slideleft(); });
-  $('#geo-page').bind("slideleft", function() { slideleft(); });
-  $('#photo-page').bind("slideleft", function() { slideleft(); });
-  $('#adder-page').bind("slideleft", function() { $.mobile.changePage('#main-page', {transition : "slide"}); });
+  $('#change-page').bind("swipeleft", function() { slideleft(); });
+  $('#geo-page').bind("swipeleft", function() { slideleft(); });
+  $('#photo-page').bind("swipeleft", function() { slideleft(); });
+  $('#adder-page').bind("swipeleft", function() { $.mobile.changePage('#main-page', {transition : "slide"}); });
   
   $('#geoButt').click(function() {
     var element = document.getElementById('geolocation');
