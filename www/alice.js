@@ -54,15 +54,15 @@ alert('ready');
     $.mobile.changePage('#main-page');
   });
 
-  $('#photo-page').bind("swipeleft", function() { slideleft(); });
+  $('#photo-page').bind("swipeleft", function(event) { slideleft(); });
 
   $('#change-page').bind("swipeleft", function(event) {
     $.mobile.changePage('#main-page', {transition : "flip"});
   });
 
-  $('#adder-page').bind("swipeleft", function() { slideleft(); });
+  $('#adder-page').bind("swipeleft", function(event) { slideleft(); });
 
-  $(window).resize(function () { alert('resized'); } );
+  $(window).resize(function() { alert('resized'); } );
 
   $('#geoButt').click(function() {
     var element = document.getElementById('geolocation');
