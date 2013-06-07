@@ -81,6 +81,7 @@ $( document ).ready(function() {
   });
 
   $('#addButt').click(function() {
+alert('click');
     var x = $('#addend_x').value;
     var y = $('#addend_y').value;
     var s = x+y;
