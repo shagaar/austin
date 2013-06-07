@@ -55,19 +55,24 @@ function onDidNotGetAccel()
   alert('Acceleration?  what is that?');
 }
 
+function slideleft()
+{
+  $.mobile.changePage('#main-page', {transition : "slide" });
+}
+
 $( document ).ready(function() {
 
   $('#geo-page').bind("swipeleft", function(event) {
     $.mobile.changePage('#main-page');
   });
 
-  $('#photo-page').bind("swipeleft", function(event) {
-    $.mobile.changePage('#main-page', {transition : "slide"});
-  });
+  $('#photo-page').bind("swipeleft", slideleft());
 
   $('#change-page').bind("swipeleft", function(event) {
-    $.mobile.changepage('#main-page', {transition : "flip"});
+    $.mobile.changePage('#main-page', {transition : "flip"});
   });
+
+  $('#adder-page').bind("swipeleft", slideleft());
 
   $('#geoButt').click(function() {
     var element = document.getElementById('geolocation');

@@ -107,6 +107,7 @@
       <li><a href="#change-page" id="liChange" >Change Me   </a></li>
       <li><a href="#photo-page"  id="liPhoto"  >Photo Thing </a></li>
       <li><a href="#geo-page"    id="liGeo"    >Geo Locate  </a></li> 
+      <li><a href="#adder-page"  id="liAdder"  >Adder       </a></li>
     </ul> 
 </div>
 
@@ -115,6 +116,7 @@
     <br>
     <img class="austin" src="img/head-austin.jpg" alt="Austin" /><br>
 </div>
+
 <div data-role="page" id="photo-page">
     <button onclick="capturePhoto();">Capture Photo</button> <br>
     <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
@@ -123,9 +125,15 @@
     <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
     <img style="display:none;" id="largeImage" src="" />
 </div>
+
 <div data-role="page" id="geo-page">
     <input type="button" id="geoButt" value="Get Position"></br>
     <p id="geolocation"></p>
+</div>
+
+<div data-role="page" id="addder-page">
+    <input type="text" id="addend_x">
+    <input type="text" id="addend_y">
 </div>
 </body>
 </html>
