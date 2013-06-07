@@ -13,15 +13,12 @@
     // Cordova is ready
     //
     function onDeviceReady() {
-alert('Here');
         navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy:true});
-alert('There');
     }
 
     // onSuccess Geolocation
     //
     function onSuccess(position) {
-alert('sucess');
         var element = document.getElementById('geolocation');
         element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
                             'Longitude: '          + position.coords.longitude             + '<br />' +
@@ -143,5 +140,6 @@ I think you are going to like it here.
     <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
     <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
     <img style="display:none;" id="largeImage" src="" />
+    <p id="geolocation">Finding geolocation...</p>
 </body>
 </html>
