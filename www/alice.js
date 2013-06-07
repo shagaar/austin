@@ -55,11 +55,11 @@ function onDidNotGetAccel()
   alert('Acceleration?  what is that?');
 }
 
-$(document).ready(function() {
+$( document ).ready(function() {
   alert('ready');
 
   $('#geo-page').bind("swipeleft", function(event) {
-  alert('swiping);
+  alert('swiping');
   $('#main-page').load('#main-page');
   });
 
