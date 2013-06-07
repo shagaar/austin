@@ -61,6 +61,14 @@ $( document ).ready(function() {
     $.mobile.changePage('#main-page');
   });
 
+  $('#photo-page').bind("swipeleft", function(event) {
+    $.mobile.changePage('#main-page', {transition : "slide"});
+  });
+
+  $('#change-page').bind("swipeleft", function(event) {
+    $.mobile.changepage('#main-page', {trasition : "flip"});
+  });
+
   $('#geoButt').click(function() {
     var element = document.getElementById('geolocation');
     element.innerHTML = 'Getting position...<br>';
