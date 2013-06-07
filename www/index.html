@@ -101,7 +101,7 @@
 <p>
 I think you are going to like it here.
 </p>
-<button type="button" id="cButton" onclick="geoButton();">Change Me</button><br>
+<button type="button" id="cButton" onclick="changeButton();">Change Me</button><br>
 <br>
 <img class="austin" src="img/head-austin.jpg" alt="Austin" /><br>
 <button onclick="capturePhoto();">Capture Photo</button> <br>
@@ -110,6 +110,7 @@ I think you are going to like it here.
     <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
     <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
     <img style="display:none;" id="largeImage" src="" />
-    <p id="geolocation">Finding geolocation...</p>
+<button onclick="geoButton();">Get Position</button></br>
+    <p id="geolocation"></p>
 </body>
 </html>

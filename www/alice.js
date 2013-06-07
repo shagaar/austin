@@ -23,6 +23,8 @@ function changeButton ()
 function geoButton()
 {
 alert('Here');
+  var element = document.getElementById('geolocation');
+  element.innerHTML = 'Getting position...<br>';
   navigator.geolocation.getCurrentPosition(onGotPosition, onDidNotGetPostion, {enableHighAccuracy:true});
 alert('There');
 }
@@ -42,6 +44,9 @@ function onGotPosition(position)
 
 function onDidNotGetPosition()
 {
+  var element = document.getElementById('geolocation');
+  element.innerHTML = 'Failed to get geographic location<br>';
+
         alert('code: '    + error.code    + '\n' +
                 'message: ' + error.message + '\n');
 }
