@@ -25,11 +25,11 @@ function geoButton()
 alert('Here');
   var element = document.getElementById('geolocation');
   element.innerHTML = 'Getting position...<br>';
-  navigator.geolocation.getCurrentPosition(onGotPosition, onDidNotGetPostion, {enableHighAccuracy:true});
+  navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy:true});
 alert('There');
 }
 
-function onGotPosition(position)
+function onSuccess(position)
 {
         var element = document.getElementById('geolocation');
         element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
@@ -42,7 +42,7 @@ function onGotPosition(position)
                             'Timestamp: '          +                                   position.timestamp          + '<br />';
 }
 
-function onDidNotGetPosition()
+function onError()
 {
   var element = document.getElementById('geolocation');
   element.innerHTML = 'Failed to get geographic location<br>';
