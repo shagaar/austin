@@ -58,7 +58,7 @@ function onDidNotGetAccel()
 $( document ).ready(function() {
 
   $('#geo-page').bind("swipeleft", function(event) {
-    $(document).load('#main-page');
+    $.mobile.changePage('#main-page');
   });
 
   $('#geoButt').click(function() {
