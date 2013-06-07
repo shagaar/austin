@@ -6,12 +6,6 @@
 <script type="text/javascript" src="alice.js"></script>
 <script type="text/javascript" charset="utf-8">
 
-    // Wait for Cordova to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-</script>
-<script type="text/javascript" charset="utf-8">
-
     var pictureSource;   // picture source
     var destinationType; // sets the format of returned value 
 
@@ -104,7 +98,7 @@
 <p>
 I think you are going to like it here.
 </p>
-<button type="button" id="cButton" onclick="onDeviceReady();">Change Me</button><br>
+<button type="button" id="cButton" onclick="geoButton();">Change Me</button><br>
 <br>
 <img class="austin" src="img/head-austin.jpg" alt="Austin" /><br>
 <button onclick="capturePhoto();">Capture Photo</button> <br>

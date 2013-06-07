@@ -20,7 +20,7 @@ function changeButton ()
   b.className = c;
 }
 
-function onDeviceReady()
+function geoButton()
 {
 alert('Here');
   navigator.geolocation.getCurrentPosition(onGotPosition, onDidNotGetPostion, {enableHighAccuracy:true});
