@@ -63,6 +63,7 @@ function onDidNotGetAccel()
 }
 
 $('#geo-page').bind("swipeleft", function(event) {
+alert('swiping);
   $('#main-page').load('#main-page');
 });
 
