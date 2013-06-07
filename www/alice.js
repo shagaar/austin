@@ -26,8 +26,6 @@ function slideleft()
 }
 
 $(document).ready(function() {
-
-alert('ready');
   $('#geo-page').bind("swipeleft", function(event) {
     $.mobile.changePage('#main-page');
   });
@@ -42,27 +40,25 @@ alert('ready');
 
   $(window).resize(function() { alert('resized'); } );
 
-$('#cbutton').click(event, function ()
-{
-  var r = Math.floor(Math.random()*3)+1;
-  var c;
-
-  switch(r)
+  $('#cbutton').click(event, function ()
   {
-    case 1:
-      c="Red";
-      break;
-    case 2:
-      c="Blue";
-      break;
-    case 3:
-      c="Grey";
-      break;
-  }
-
-  var b = document.getElementById("cButton");
-  b.className = c;
-});
+    var r = Math.floor(Math.random()*3)+1;
+    var c;
+    switch(r)
+    {
+      case 1:
+        c="Red";
+        break;
+      case 2:
+        c="Blue";
+        break;
+      case 3:
+        c="Grey";
+        break;
+    }
+    var b = document.getElementById("cButton");
+    b.className = c;
+  });
 
   $('#geoButt').click(function() {
     var element = document.getElementById('geolocation');
@@ -79,3 +75,4 @@ alert(s);
     var sumel = document.getElementById('thesum');
     sumel.innerHTML = '*** ' + s + ' ***<br>'; 
 });
+
