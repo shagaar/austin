@@ -22,21 +22,26 @@ function changeButton ()
 
 function onDeviceReady()
 {
-alert('Here');
-  navigator.geolocation.getCurrentPosition(onGotPosition, onDidNotGetPostion);
-alert('There');
+  navigator.geolocation.getCurrentPosition(onGotPosition, onDidNotGetPostion, {enableHighAccuracy:true});
 }
 
 function onGotPosition(position)
 {
-alert('Got Positon');
-  document.getElementById("cButton").className = "Blue";
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                            'Longitude: '          + position.coords.longitude             + '<br />' +
+                            'Altitude: '           + position.coords.altitude              + '<br />' +
+                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                            'Heading: '            + position.coords.heading               + '<br />' +
+                            'Speed: '              + position.coords.speed                 + '<br />' +
+                            'Timestamp: '          +                                   position.timestamp          + '<br />';
 }
 
 function onDidNotGetPosition()
 {
-alert('Fail');
-  document.getElementById("cButton").className = "Red";
+        alert('code: '    + error.code    + '\n' +
+                'message: ' + error.message + '\n');
 }
 
 function onGotAccel(acceleraton)
