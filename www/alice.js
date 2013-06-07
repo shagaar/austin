@@ -22,14 +22,12 @@ function changeButton ()
 
 function geoButton()
 {
-alert('Here');
   var element = document.getElementById('geolocation');
   element.innerHTML = 'Getting position...<br>';
-  navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy:true});
-alert('There');
+  navigator.geolocation.getCurrentPosition(onSucc, onErr, {enableHighAccuracy:true});
 }
 
-function onSuccess(position)
+function onSucc(position)
 {
         var element = document.getElementById('geolocation');
         element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
@@ -42,7 +40,7 @@ function onSuccess(position)
                             'Timestamp: '          +                                   position.timestamp          + '<br />';
 }
 
-function onError()
+function onErr()
 {
   var element = document.getElementById('geolocation');
   element.innerHTML = 'Failed to get geographic location<br>';
