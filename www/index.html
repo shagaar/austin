@@ -97,20 +97,33 @@
 </script>
 </head>
 <body>
-<h1>Welcome to My Nightmare</h1>
-<p>
-I think you are going to like it here.
-</p>
-<button type="button" id="cButton" onclick="changeButton();">Change Me</button><br>
-<br>
-<img class="austin" src="img/head-austin.jpg" alt="Austin" /><br>
-<button onclick="capturePhoto();">Capture Photo</button> <br>
+<div data-role="page" id="main-page">
+    <h1>Welcome to My Nightmare</h1>
+    <p> I think you are going to like it here.  </p>
+    <ul data-role="listview" data-inset="true">
+      <li data-role="list-divider">Places to go</li>
+      <li><a href="#change-page" data-role="button">
+      <li><a href="#photo-page" data-role="button">
+      <li><a href="#geo-page" data-role="button"> 
+    </ul> 
+</div>
+
+<div data-role="page" id="change-page">
+    <button type="button" id="cButton" >Change Me</button><br>
+    <br>
+    <img class="austin" src="img/head-austin.jpg" alt="Austin" /><br>
+</div>
+<div data-role="page" id="photo-page">
+    <button onclick="capturePhoto();">Capture Photo</button> <br>
     <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
     <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
     <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
     <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
     <img style="display:none;" id="largeImage" src="" />
-<button onclick="geoButton();">Get Position</button></br>
+</div>
+<div data-role="page" id="geo-page">
+    <button onclick="geoButton();">Get Position</button></br>
     <p id="geolocation"></p>
+</div>
 </body>
 </html>

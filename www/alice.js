@@ -61,3 +61,7 @@ function onDidNotGetAccel()
 {
   alert('Acceleration?  what is that?');
 }
+
+$('#geo-page').bind("swipeleft", function(event) {
+  $('#main-page').load('#main-page');
+}
