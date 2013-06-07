@@ -61,7 +61,7 @@ $(document).ready(function() {
   $('#main-page').load('#main-page');
   });
 
-  $('#liGeo').click(function() {
+  $('#geoButt').click(function() {
     alert('button dammit');
     var element = document.getElementById('geolocation');
     element.innerHTML = 'Getting position...<br>';
