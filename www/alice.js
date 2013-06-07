@@ -20,14 +20,6 @@ function changeButton ()
   b.className = c;
 }
 
-$('#geoButt').click(function ()
-{
-alert('been clicked');
-  var element = document.getElementById('geolocation');
-  element.innerHTML = 'Getting position...<br>';
-  navigator.geolocation.getCurrentPosition(onSucc, onErr, {enableHighAccuracy:true});
-});
-
 function onSucc(position)
 {
         var element = document.getElementById('geolocation');
@@ -71,5 +63,8 @@ $(document).ready(funciton() {
 
   $('#liGeo').click(function() {
     alert('button dammit');
+    var element = document.getElementById('geolocation');
+    element.innerHTML = 'Getting position...<br>';
+    navigator.geolocation.getCurrentPosition(onSucc, onErr, {enableHighAccuracy:true});
   });
 });
