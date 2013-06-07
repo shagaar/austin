@@ -13,12 +13,15 @@
     // Cordova is ready
     //
     function onDeviceReady() {
+alert('Here');
         navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy:true});
+alert('There');
     }
 
     // onSuccess Geolocation
     //
     function onSuccess(position) {
+alert('sucess');
         var element = document.getElementById('geolocation');
         element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
                             'Longitude: '          + position.coords.longitude             + '<br />' +
