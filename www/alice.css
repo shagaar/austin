@@ -2,14 +2,14 @@ h1 {
   color: red;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 399px) {
   .austin {
     width: 470px;
     height: 75px;
   }
 }
 
-@media (max-width: 451px) {
+@media (max-width: 400px) {
   .austin {
     display: none;
   }
