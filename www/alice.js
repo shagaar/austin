@@ -22,6 +22,7 @@ function changeButton ()
 
 $('#geoButt').click(function ()
 {
+alert('been clicked');
   var element = document.getElementById('geolocation');
   element.innerHTML = 'Getting position...<br>';
   navigator.geolocation.getCurrentPosition(onSucc, onErr, {enableHighAccuracy:true});
