@@ -42,19 +42,6 @@ function onErr()
                 'message: ' + error.message + '\n');
 }
 
-function onGotAccel(acceleraton)
-{
-  alert('Acceleration x: ' + acceleration.x + '\n' +
-        'Acceleration y: ' + acceleration.y + '\n' +
-        'Acceleration z: ' + acceleration.z + '\n' +
-        'Timestamp: '      + acceleration.timestamp + '\n');
-}
-
-function onDidNotGetAccel()
-{
-  alert('Acceleration?  what is that?');
-}
-
 function slideleft()
 {
   $.mobile.changePage('#main-page', {transition : "slide" });
