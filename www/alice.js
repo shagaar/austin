@@ -64,4 +64,8 @@ function onDidNotGetAccel()
 
 $('#geo-page').bind("swipeleft", function(event) {
   $('#main-page').load('#main-page');
-}
+});
+
+$('#liGeo').click(function() {
+  alert('button dammit');
+});
