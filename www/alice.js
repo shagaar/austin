@@ -1,3 +1,32 @@
+function changeButton ()
+{
+  var r = Math.floor(Math.random()*3)+1;
+  var c;
+
+  switch(r)
+  {
+    case 1:
+      c="Red";
+      break;
+    case 2:
+      c="Blue";
+      break;
+    case 3:
+      c="Grey";
+      break;
+  }
+  
+  var b = document.getElementById("cButton");
+  b.className = c;
+}
+
+function geoButton()
+{
+  var element = document.getElementById('geolocation');
+  element.innerHTML = 'Getting position...<br>';
+  navigator.geolocation.getCurrentPosition(onSucc, onErr, {enableHighAccuracy:true});
+}
+
 function onSucc(position)
 {
         var element = document.getElementById('geolocation');
@@ -20,59 +49,19 @@ function onErr()
                 'message: ' + error.message + '\n');
 }
 
-function slideleft()
-{
-  $.mobile.changePage('#main-page', {transition : "slide" });
+function slideleft() {
+  $.mobile.changePage('#main-page', { transition : "slide" });
 }
 
 $(document).ready(function() {
-  $('#geo-page').bind("swipeleft", function(event) {
-    $.mobile.changePage('#main-page');
-  });
-
-  $('#photo-page').bind("swipeleft", function(event) { slideleft(); });
-
-  $('#change-page').bind("swipeleft", function(event) {
-    $.mobile.changePage('#main-page', {transition : "flip"});
-  });
-
-  $('#adder-page').bind("swipeleft", function(event) { slideleft(); });
-
-  $(window).resize(function() { alert('resized'); } );
-
-  $('#cbutton').click(event, function ()
-  {
-    var r = Math.floor(Math.random()*3)+1;
-    var c;
-    switch(r)
-    {
-      case 1:
-        c="Red";
-        break;
-      case 2:
-        c="Blue";
-        break;
-      case 3:
-        c="Grey";
-        break;
-    }
-    var b = document.getElementById("cButton");
-    b.className = c;
-  });
-
+  $('#change-page').bind("slideleft", function() { slideleft(); });
+  $('#geo-page').bind("slideleft", function() { slideleft(); });
+  $('#photo-page').bind("slideleft", function() { slideleft(); });
+  $('#adder-page').bind("slideleft", function() { slideleft(); });
+  
   $('#geoButt').click(function() {
     var element = document.getElementById('geolocation');
     element.innerHTML = 'Getting position...<br>';
     navigator.geolocation.getCurrentPosition(onSucc, onErr, {enableHighAccuracy:true});
   });
-
-  $('#addButt').click(function() {
-alert('click');
-    var x = $('#addend_x').value;
-    var y = $('#addend_y').value;
-    var s = x+y;
-alert(s);
-    var sumel = document.getElementById('thesum');
-    sumel.innerHTML = '*** ' + s + ' ***<br>'; 
-});
-
+}
