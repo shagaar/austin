@@ -79,4 +79,11 @@ $( document ).ready(function() {
     element.innerHTML = 'Getting position...<br>';
     navigator.geolocation.getCurrentPosition(onSucc, onErr, {enableHighAccuracy:true});
   });
+
+  $('#addButt').click(function() {
+    var x = $('#addend_x').value;
+    var y = $('#addend_y').value;
+    var s = x+y;
+    var sumel = document.getElementById('thesum');
+    sumel.innerHTML = '*** ' + s + ' ***<br>'; 
 });
