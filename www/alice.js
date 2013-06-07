@@ -84,6 +84,7 @@ $( document ).ready(function() {
     var x = $('#addend_x').value;
     var y = $('#addend_y').value;
     var s = x+y;
+alert(s);
     var sumel = document.getElementById('thesum');
     sumel.innerHTML = '*** ' + s + ' ***<br>'; 
 });
