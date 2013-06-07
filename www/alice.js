@@ -63,11 +63,13 @@ function onDidNotGetAccel()
   alert('Acceleration?  what is that?');
 }
 
-$('#geo-page').bind("swipeleft", function(event) {
-alert('swiping);
+$(document).ready(funciton() {
+  $('#geo-page').bind("swipeleft", function(event) {
+  alert('swiping);
   $('#main-page').load('#main-page');
-});
+  });
 
-$('#liGeo').click(function() {
-  alert('button dammit');
+  $('#liGeo').click(function() {
+    alert('button dammit');
+  });
 });
